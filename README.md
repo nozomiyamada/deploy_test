@@ -20,6 +20,7 @@ Free Hosting Services
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
+$ pip install pip==20.1.1   
 (my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 ~~~
 
@@ -30,13 +31,12 @@ write the list of packages to `requirements.txt`
 ~~~
 
 ~~~
-blinker==1.7.0
 certifi==2023.11.17
 charset-normalizer==3.3.2
 click==8.1.7
-Flask==3.0.0
-gensim==4.3.2
-gunicorn==21.2.0
+Flask==2.0.0
+gensim==4.1.0
+gunicorn==20.0.0
 ...
 ~~~
 
@@ -84,6 +84,19 @@ WARNING: This is a development server. Do not use it in a production deployment.
 ## How to deploy
 
 ### Render
+
+=== NOTION ===
+
+version of python in Render is 3.7, thus you have to install older version of libiralies in your virtual environment. 
+
+~~~bash
+$ cd XX/XX  ## change directory 
+$ python3 -m venv my_env  ## create virtual environment
+$ source my_env/bin/activate  ## activate virtual environment
+(my_env) $ pip install flask==2.0 gensim==4.1 pythainlp==3.0 gunicorn==20.0 ## install libaries
+(my_env) $ pip freeze > requirements.txt  ## install libaries
+~~~
+
 
 ##### 1. go to page and sign up with GitHub account
 
