@@ -30,12 +30,17 @@ write the list of packages to `requirements.txt`
 ~~~
 
 ~~~
+backports.zoneinfo==0.2.1
 certifi==2023.11.17
 charset-normalizer==3.3.2
 click==8.1.7
-Flask==2.0.0
-gensim==4.1.0
-gunicorn==20.0.0
+Flask==2.2.5
+gensim==4.2.0
+gunicorn==21.2.0
+numpy==1.21.6
+pythainlp==4.0.2
+requests==2.31.0
+scipy==1.7.3
 ...
 ~~~
 
@@ -86,13 +91,13 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
 === NOTION ===
 
-version of python in Render is `3.7.10`, thus you have to install older version of libiralies in your virtual environment. 
+version of python in Render is `3.7.10`, thus you have to install older version of libiralies in your virtual environment. You have to install Python 3.7 in advance.
 
 ~~~bash
 $ cd XX/XX  ## change directory 
-$ python3 -m venv my_env  ## create virtual environment
+$ python3.7 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask==1.1 gensim==4.0 pythainlp==2.2 gunicorn==20.0 ## install libaries
+(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 (my_env) $ pip freeze > requirements.txt  ## install libaries
 ~~~
 
