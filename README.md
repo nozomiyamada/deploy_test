@@ -20,7 +20,7 @@ Free Hosting Services
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask==2.2 gensim==4.0 pythainlp==3.0 gunicorn ## install libaries
+(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 ~~~
 
 write the list of packages to `requirements.txt`
@@ -113,7 +113,9 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
 <img src="img/render/render_deploy1.png" style="width:500px"><br>
 
-set `Start Command` as `gunicorn app:app --bind=0.0.0.0:8000`
+
+- set `Build Command` as `pip install --upgrade pip && pip install -r requirements.txt`
+- set `Start Command` as `gunicorn app:app --bind=0.0.0.0:8000`
 
 <img src="img/render/render_deploy2.png" style="width:500px"><br>
 
