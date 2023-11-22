@@ -20,7 +20,7 @@ Free Hosting Services
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
+(my_env) $ pip install flask==2.2 gensim pythainlp gunicorn ## install libaries
 ~~~
 
 write the list of packages to `requirements.txt`
