@@ -19,8 +19,7 @@ Free Hosting Services
 ~~~bash
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
-$ source my_env/bin/activate  ## activate virtual environment
-$ pip install pip==20.1.1   
+$ source my_env/bin/activate  ## activate virtual environment 
 (my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 ~~~
 
@@ -87,13 +86,13 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
 === NOTION ===
 
-version of python in Render is 3.7, thus you have to install older version of libiralies in your virtual environment. 
+version of python in Render is `3.7.10`, thus you have to install older version of libiralies in your virtual environment. 
 
 ~~~bash
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask==2.0 gensim==4.1 pythainlp==3.0 gunicorn==20.0 ## install libaries
+(my_env) $ pip install flask==1.2 gensim==4.0 pythainlp==2.2 gunicorn==20.0 ## install libaries
 (my_env) $ pip freeze > requirements.txt  ## install libaries
 ~~~
 
