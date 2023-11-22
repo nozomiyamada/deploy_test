@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Thai Text Tokenization</h2>
+
+<form action="/" method="POST">
+    <p>
+        <input type="text" name="input_text" id="input_text" style="width: 300px;" value="{{original_text}}">
+    </p>
+	<p>
+        <label for="delimiter">choose a delimiter:</label>
+        <select name="delimiter">
+            <option value=" " selected>space</option>
+            <option value="|">|</option>
+            <option value="-">-</option>
+        </select>
+    </p>
+    <input type="button" value="RESET" onclick="input_text.value='';">
+	<input type="submit" value="TOKENIZE!">	
+</form>
+
+{% if tokens %}
+<h4>Tokenization Result</h4>
+<p>{{ original_text}}</p>
+<p>→ {{ tokens }}</p> <!-- embed returned variable -->
+{% endif %}
+
+{% endblock %}

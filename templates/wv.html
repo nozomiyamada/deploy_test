@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+    }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {background-color: #dddddd;}
+</style>
+
+<h2>Word Embeddings : Most Similar Words</h2>
+
+<form action="/wv" method="POST">
+    <p>
+        <input type="text" name="input_text" id="input_text" style="width: 300px;" value="{{original_text}}">
+    </p>
+    <input type="button" value="RESET" onclick="input_text.value='';">
+	<input type="submit" value="SEARCH!">	
+</form>
+
+{% if wv_result %}
+<h4>Most similar 10 words</h4>
+<table>
+    <thead>
+        <th>Word</th>
+        <th>Cosine Similarity</th>
+    </thead>
+    <tbody>
+        {% for row in wv_result %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% endblock %}
