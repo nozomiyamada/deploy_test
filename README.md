@@ -111,7 +111,11 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
 ##### 7. application setting 
 
-<img src="img/render/render_connect2.png" style="width:500px"><br>
+<img src="img/render/render_deploy1.png" style="width:500px"><br>
+
+set `Start Command` as `gunicorn app:app --bind=0.0.0.0:8000`
+
+<img src="img/render/render_deploy2.png" style="width:500px"><br>
 
 #### 2. AWS Lambda
 
