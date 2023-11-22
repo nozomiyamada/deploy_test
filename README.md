@@ -20,7 +20,7 @@ Free Hosting Services
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask gensim pythainlp  ## install libaries
+(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 ~~~
 
 write the list of packages to `requirements.txt`
@@ -31,9 +31,12 @@ write the list of packages to `requirements.txt`
 
 ~~~
 blinker==1.7.0
+certifi==2023.11.17
+charset-normalizer==3.3.2
 click==8.1.7
 Flask==3.0.0
 gensim==4.3.2
+gunicorn==21.2.0
 ...
 ~~~
 
@@ -80,19 +83,35 @@ WARNING: This is a development server. Do not use it in a production deployment.
 
 ## How to deploy
 
-#### 1. Render
+### Render
 
-- go to page and sign up with GitHub account
+##### 1. go to page and sign up with GitHub account
 
-![render_signup](img/render/render_signup.png)
+<img src="img/render/render_signup.png" style="width:500px"><br>
 
-- select `Web Services`
+##### 2. select `Web Services`
 
-![render_getstart](img/render/render_getstart.png)
+<img src="img/render/render_getstart.png" style="width:500px"><br>
 
-- select `Build and deploy from a Git repository`
+##### 3. select `Build and deploy from a Git repository`
 
-![render_build](img/render/render_build.png)
+<img src="img/render/render_build.png" style="width:500px"><br>
+
+##### 4. click `Connect Repository`
+
+<img src="img/render/render_connect_git.png" style="width:500px"><br>
+
+##### 5. select repository > `install`
+
+<img src="img/render/render_select_repo.png" style="width:300px"><br>
+
+##### 6. click `connect`
+
+<img src="img/render/render_connect2.png" style="width:500px"><br>
+
+##### 7. application setting 
+
+<img src="img/render/render_connect2.png" style="width:500px"><br>
 
 #### 2. AWS Lambda
 
