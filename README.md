@@ -23,6 +23,17 @@ $ source my_env/bin/activate  ## activate virtual environment
 (my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
 ~~~
 
+=== NOTION ===
+
+version of Python in **Render** is `3.7.10`, thus we have to install Python 3.7 and older version of libiralies in the virtual environment.
+
+~~~bash
+$ cd XX/XX  ## change directory 
+$ python3.7 -m venv my_env  ## create virtual environment
+$ source my_env/bin/activate  ## activate virtual environment
+(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
+~~~
+
 write the list of packages to `requirements.txt`
 
 ~~~bash
@@ -48,7 +59,7 @@ scipy==1.7.3
 ## Prepare files
 
 - create a web application by using `Flask`
-- see `app.py` and `templates/**.html` and [Flask documentation](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
+- see `app.py`, `templates/**.html` and [Flask documentation](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ~~~
 (root directory)/
@@ -60,7 +71,6 @@ scipy==1.7.3
 　│　├ tokenization.html
 　│　└ wv.html
 　├ requirements.txt  ## list of python packages
-　├ run.sh  ## shell script 
 　├ .gitignore  
 　└ app.py  ## main program
 ~~~
@@ -77,29 +87,23 @@ WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://127.0.0.1:8000
 ~~~
 
-> tokenization page
+> **tokenization page**
 
 ![page1](img/page1.png)
 
-> word embedding page
+> **word embedding page**
 
 ![page2](img/page2.png)
 
 ## How to deploy
 
-### Render
+### - Render -
 
-=== NOTION ===
+[Render](https://render.com/) gives 750 hours free tier per month (only one application). 
 
-version of python in Render is `3.7.10`, thus you have to install older version of libiralies in your virtual environment. You have to install Python 3.7 in advance.
+The program will automatically pause if there is no request for 15 minutes. Therefore, there may be a delay in accessing the web page after restarting the application.
 
-~~~bash
-$ cd XX/XX  ## change directory 
-$ python3.7 -m venv my_env  ## create virtual environment
-$ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask gensim pythainlp gunicorn ## install libaries
-(my_env) $ pip freeze > requirements.txt  ## install libaries
-~~~
+EXAMPLE : https://test-app-r6km.onrender.com/
 
 
 ##### 1. go to page and sign up with GitHub account
@@ -131,10 +135,16 @@ $ source my_env/bin/activate  ## activate virtual environment
 <img src="img/render/render_deploy1.png" style="width:500px"><br>
 
 
-- set `Build Command` as `pip install -r requirements.txt`
-- set `Start Command` as `gunicorn app:app --bind=0.0.0.0:8000`
+- set **Build Command** as `pip install -r requirements.txt`
+- set **Start Command** as `gunicorn app:app --bind=0.0.0.0:8000`
 
 <img src="img/render/render_deploy2.png" style="width:500px"><br>
+
+##### 8. deploy
+
+start deployment. If error happens, `Manual Deploy` > `Deploy latest commit` after fixing the error and pushing to GitHub 
+
+<img src="img/render/render_log.png" style="width:500px"><br>
 
 #### 2. AWS Lambda
 
