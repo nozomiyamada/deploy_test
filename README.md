@@ -92,7 +92,7 @@ version of python in Render is `3.7.10`, thus you have to install older version 
 $ cd XX/XX  ## change directory 
 $ python3 -m venv my_env  ## create virtual environment
 $ source my_env/bin/activate  ## activate virtual environment
-(my_env) $ pip install flask==1.2 gensim==4.0 pythainlp==2.2 gunicorn==20.0 ## install libaries
+(my_env) $ pip install flask==1.1 gensim==4.0 pythainlp==2.2 gunicorn==20.0 ## install libaries
 (my_env) $ pip freeze > requirements.txt  ## install libaries
 ~~~
 
@@ -126,7 +126,7 @@ $ source my_env/bin/activate  ## activate virtual environment
 <img src="img/render/render_deploy1.png" style="width:500px"><br>
 
 
-- set `Build Command` as `pip install --upgrade pip && pip install -r requirements.txt`
+- set `Build Command` as `pip install -r requirements.txt`
 - set `Start Command` as `gunicorn app:app --bind=0.0.0.0:8000`
 
 <img src="img/render/render_deploy2.png" style="width:500px"><br>
