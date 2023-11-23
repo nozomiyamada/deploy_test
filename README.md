@@ -1,6 +1,7 @@
-# Deployment Example
+# Flask Application Deployment Example
 
-- create a web application for Thai text analysis, e.g. tokenization, word embeddings
+- create a web application for Thai text analysis, e.g. tokenization, word embeddings by using `Flask`
+- deploy the application to website
 
 Free Hosting Services
 
@@ -8,8 +9,6 @@ Free Hosting Services
 - [Pythonanywhere]()
 - [AWS Lambda](https://aws.amazon.com/pm/lambda/) - FaaS (Function as a Service) type cloud computing 
 - [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elastic-beanstalk/)
-
-- [Streamlit]()
 
 
 ## Create virtual environment
@@ -59,7 +58,7 @@ scipy==1.7.3
 
 ## Prepare files
 
-- create a web application by using `Flask`
+- example of `Flask` application
 - see `app.py`, `templates/**.html` and [Flask documentation](https://flask.palletsprojects.com/en/3.0.x/quickstart/)
 
 ~~~
@@ -163,9 +162,7 @@ In addition, Python Anywhere offers various versions of Python from 3.6 to 3.10.
 
 <img src="img/pythonanywhere/pyany_edit.png" style="width:300px"><br>
 
-_Documentations_ : 
-
-- Setting up Flask applications on PythonAnywhere_
+Documentation :  _Setting up Flask applications on PythonAnywhere_
 https://help.pythonanywhere.com/pages/Flask/
 
 
